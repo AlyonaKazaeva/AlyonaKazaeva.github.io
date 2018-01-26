@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+
+<body>
+  <div id="wrap" class="wrap">
+    <div id="progress" class="progress">
+      <p>Progress</p>
+      <canvas id="bar" class="progress-bar" width="170" height="170"></canvas>
+    </div>
+    <div id="switchers" class="switchers">
+      <div class="switchers-items">
+        <input type="text" id="number" class="switchers-number" min="0" max="100" pattern="\d [0-100]" maxlength="3" value="100" onchange="buildValue(this)">
+        <label class="number-label">Value</label>
+        <div class="switchers-animate">
+          <input type="checkbox" id="checkbox" class="switchers-checkbox" onclick="buildValue(this)" checked>
+          <label class="checkbox-label" for="checkbox"></label>
+        </div>
+        <label class="animate-label">Animate</label>
+        <br>
+        <div class="switchers-hide">
+          <input type="checkbox" id="hide" class="switchers-checkbox" onclick="hideProgress()">
+          <label class="checkbox-label" for="hide"></label>
+        </div>
+        <label class="hide-label">Hide</label>
+      </div>
+    </div>
+  </div>
+  <script src="javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  font: 20px/24px Arial, Tahoma, sans-serif;
+  line-height: 1.5em;
+}
+
+p {
+  position: absolute;
+  left:10px;
+  color: #000;
+  font-size: 1.5em;
+}
+
+canvas {
+  position: relative;
+  top: 90px;
+  left: 70px;
+}
+
+.wrap {
+  width: 320px;
+  height: 568px;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  top: -25px;
+}
+
+.progress, 
+.switchers {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  float: left;
+}
+
+.switchers-items {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  position: relative;
+  top: 40px;
+  left: 87px;
+}
+
+.switchers-number {
+  text-align: center;
+  font-size: 1em;
+  width: 48px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 30px;
+  outline: none;
+}
+
+.number-label {
+  position: relative;
+  left: 10px;
+}
+
+.switchers-animate {
+  position: relative;
+  top: 15px;
+  width: 48px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.switchers-checkbox {
+  display: none;
+}
+.animate-label {
+  position: relative;
+  left: 63px;
+  top: -14px;
+}
+
+.checkbox-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  background-color: #4a4a4a;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-label:before {
+  content: "";
+  display: block;
+  width: 30px;
+  margin: 0px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 16px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  transition: all 0.3s ease 0s;
+}
+
+.switchers-checkbox:checked+.checkbox-label {
+  background-color: #7ED321;
+}
+
+.switchers-checkbox:checked+.checkbox-label,
+.switchers-checkbox:checked+.checkbox-label:before {
+  border-color: #7ED321;
+  right: 0px;
+}
+
+.switchers-hide {
+  position: relative;
+  width: 48px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.hide-label {
+  position: relative;
+  left: 63px;
+  top: -30px;
+}
+
+@media screen and (orientation: landscape), and (max-width: 568px) {
+  .wrap {
+    width: 568px;
+    height: 320px;
+  }
+  .progress,
+  .switchers {
+    width: 50%;
+    height: 100%;
+  }
+   
+  .switchers-items {
+    position: relative;
+    top: 110px;
+    left: 67px;
+  }
+}
+
